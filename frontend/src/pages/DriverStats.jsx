@@ -11,7 +11,7 @@ function DriverStats() {
   }, []);
 
   const loadDrivers = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/drivers");
+    const res = await axios.get("https://f1-ai-analytics.onrender.com/drivers");
     setDrivers(res.data);
   };
 
@@ -19,7 +19,7 @@ function DriverStats() {
     if (!driverId) return;
 
     const res = await axios.get(
-      `http://127.0.0.1:8000/analytics/driver/${driverId}/stats`
+      `https://f1-ai-analytics.onrender.com/analytics/driver/${driverId}/stats`
     );
 
     setStats(res.data);

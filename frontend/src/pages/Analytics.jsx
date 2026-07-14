@@ -33,15 +33,15 @@ function Analytics() {
 
   const loadData = async () => {
     const drivers = await axios.get(
-      "http://127.0.0.1:8000/analytics/top-drivers"
+      "https://f1-ai-analytics.onrender.com/analytics/top-drivers"
     );
 
     const constructors = await axios.get(
-      "http://127.0.0.1:8000/analytics/top-constructors"
+      "https://f1-ai-analytics.onrender.com/analytics/top-constructors"
     );
 
     const winners = await axios.get(
-      "http://127.0.0.1:8000/analytics/most-race-wins"
+      "https://f1-ai-analytics.onrender.com/analytics/most-race-wins"
     );
 
     setTopDrivers(drivers.data);
